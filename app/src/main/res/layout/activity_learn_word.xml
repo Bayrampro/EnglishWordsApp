@@ -65,8 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Сломать"
-                android:fontFamily="@font/rubik_regular"
-                android:textSize="16sp"
+                style="@style/TextViewVariantsStyle"
                 tools:ignore="HardcodedText" />
 
 
@@ -94,8 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Сон"
-                android:fontFamily="@font/rubik_regular"
-                android:textSize="16sp"
+                style="@style/TextViewVariantsStyle"
                 tools:ignore="HardcodedText" />
 
 
@@ -123,8 +121,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Галактика"
-                android:fontFamily="@font/rubik_regular"
-                android:textSize="16sp"
+                style="@style/TextViewVariantsStyle"
                 tools:ignore="HardcodedText" />
 
 
@@ -152,8 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="Утюг"
-                android:fontFamily="@font/rubik_regular"
-                android:textSize="16sp"
+                style="@style/TextViewVariantsStyle"
                 tools:ignore="HardcodedText" />
 
 
