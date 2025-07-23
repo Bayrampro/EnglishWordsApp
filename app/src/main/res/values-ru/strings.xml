@@ -3,6 +3,7 @@
     <string name="button_skip">ПРОПУСТИТЬ</string>
     <string name="description_correct_icon">иконка правильно</string>
     <string name="title_correct">Правильно!</string>
+    <string name="title_wrong">Неверно!</string>
     <string name="button_continue">Продолжить</string>
     <string name="description_closing_image_button">кнопка  закрытие</string>
 </resources>
