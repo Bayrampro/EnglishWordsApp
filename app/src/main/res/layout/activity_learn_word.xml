@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvQuestionWord"
         android:layout_width="311dp"
         android:layout_height="88dp"
         android:layout_gravity="center_horizontal"
@@ -41,10 +41,11 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionWord"
         android:layout_marginTop="35dp">
 
         <LinearLayout
+            android:id="@+id/layoutAnswer1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@drawable/shape_rounded_containers"
@@ -52,6 +53,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvVariantNumber1"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -61,6 +63,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvVariantValue1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -72,6 +75,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutAnswer2"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -80,6 +84,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvVariantNumber2"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -89,6 +94,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvVariantValue2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -100,6 +106,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutAnswer3"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -108,6 +115,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvVariantNumber3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -117,6 +125,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvVariantValue3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -128,6 +137,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutAnswer4"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginTop="18dp"
@@ -136,6 +146,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvVariantNumber4"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="12dp"
@@ -145,6 +156,7 @@
                 android:textSize="16sp" />
 
             <TextView
+                android:id="@+id/tvVariantValue4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -159,6 +171,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnSkip"
         android:layout_width="310dp"
         android:layout_height="58dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -166,20 +179,23 @@
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/button_skip"
         android:backgroundTint="#2574FF"
-        android:visibility="gone"/>
+        android:layout_marginBottom="30dp"
+        android:visibility="visible"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0EAD69"
+        android:background="@color/correctColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_height="150dp">
+        tools:layout_height="150dp"
+        android:visibility="gone">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/ivResultIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -190,18 +206,20 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/tvResultMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/title_correct"
             android:fontFamily="@font/rubik_regular"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/ivResultIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivResultIcon"
+            app:layout_constraintTop_toTopOf="@+id/ivResultIcon"
             android:textSize="16sp"
             android:layout_marginStart="8dp"/>
 
         <android.widget.Button
+            android:id="@+id/btnContinue"
             android:layout_width="331dp"
             android:layout_height="58dp"
             android:layout_marginTop="4dp"
@@ -209,7 +227,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/ivResultIcon"
             android:text="@string/button_continue"
             android:textSize="16sp"
             android:fontFamily="@font/nunito_bold"
